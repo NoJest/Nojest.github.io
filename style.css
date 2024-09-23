@@ -1,3 +1,42 @@
 body {
-    background: purple;
+    background: whitesmoke;
+}
+.title-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px
+ }
+ h1{
+     text-align: center;
+     font-size: x-large;
+ }
+ .sword-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+ }
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
+#spidermanmeme {
+    max-width: 100%;
+    height: auto;
+}
+.links {
+    text-align: center;
+}
+.links {
+    margin: 0 100px;
+}
+.links {
+    padding: 10;
+    padding-left:10 ;
+    padding-right: 10;
+    padding-top: 10;
+    padding-bottom: 10;
 }
