@@ -1,57 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="style.css" />
-    <title>Diving into Justin</title>
-  </head>
-  <body>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="title-container">
-      <h1> Not censored, Not uncensored, but some other type of sored </h1>
+<head>
+  <link rel="stylesheet" href="style.css" />
+  <title>Diving into Justin</title>
+</head>
+<body>
+  <button id="theme-toggle">Toggle Dark Mode</button>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="title-container">
+    <h1>Not censored, Not uncensored, but some type other of sored</h1>
+  </div>
+  <div class="sword-image">
+    <img id="guts" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl9sBJdL07lwDF4DEOPGn4XKGoqT6D3dY9OQ&s" alt="Guts sword">
+  </div>
+  <br />
+  <div class="image-container">
+    <img id="spidermanmeme" src="https://images.news18.com/ibnlive/uploads/2021/12/spiderman-meme-16401651614x3.png" alt="Spiderman Meme" width="600" height="400">
+    <img id="spotifylogo" src="..." alt="Spotify logo" style="display: none;">
+    <img id="instagramlogo" src="..." alt="Instagram logo" style="display: none;">
+    <img id="githublogo" src="..." alt="GitHub logo" style="display: none;">
+  </div>
+  <section id="about" class="fade-in">
+    <h2>About Me</h2>
+    <p>I was born in the swamps of DC, raised in the mountains of Tennessee, and reborn in the oceans and rivers of Northern California.</p>
+  </section>
+  <section id="projects" class="fade-in">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Project 1</h3>
+      <p>Description of Project 1...</p>
+      <a href="https://github.com/yourusername/project1" target="_blank">View on GitHub</a>
     </div>
-    <div class="sword-image">
-      <img id="guts" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl9sBJdL07lwDF4DEOPGn4XKGoqT6D3dY9OQ&s" alt="Guts sword">
+    <div class="project">
+      <h3>Project 2</h3>
+      <p>Description of Project 2...</p>
+      <a href="https://github.com/yourusername/project2" target="_blank">View on GitHub</a>
     </div>
-    <br />
-    <div class="image-container">
-      <img id="spidermanmeme" src="https://images.news18.com/ibnlive/uploads/2021/12/spiderman-meme-16401651614x3.png" alt="Spiderman Meme" width="600" height="400">
-      <img id="spotifylogo" src="https://imgs.search.brave.com/Qg62Pig6hyGmG0r9ijNd4AR204cDSF1DRk38KisUzNA/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jZG4x/Lmljb25maW5kZXIu/Y29tL2RhdGEvaWNv/bnMvbG9nb3MtYnJh/bmRzLWluLWNvbG9y/cy81NjcvU3BvdGlm/eV9Mb2dvX1JHQl9H/cmVlbi01MTIucG5n" alt="Spotify logo" style="display: none;">
-      <img id="instagramlogo" src="https://imgs.search.brave.com/MMmOkchhxhGPcIDTpif9ud7kCm6t4Q5aUscYatv8jC4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA4LzM3LzM1LzU5/LzM2MF9GXzgzNzM1/NTk1OF9Qdno2bHhC/VjZrdDJUNkYzWkRz/N1M3bWhaN2p1OFhQ/NC5qcGc" alt="Instagram logo" style="display: none;">
-      <img id="githublogo" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub logo" style="display: none;">
+  </section>
+  <section id="contact" class="fade-in">
+    <h2>Contact Me</h2>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <br>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+      <br>
+      <input type="submit" value="Submit">
+    </form>
+  </section>
+  <footer>
+    <div class="links">
+      <button>Github</button>|
+      <button>Instagram</button>|
+      <button>Spotify</button>
     </div>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>I was born in the swamps of DC, raised in the mountains of Tennessee, and reborn in the oceans and rivers of Northern California.</p>
-    </section>
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <form>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        <br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <br>
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
-        <br>
-        <input type="submit" value="Submit">
-      </form>
-    </section>
-    <footer>
-      <p>&copy; 2024 Justin Thomasson. All rights reserved.</p>
-      <div class="links">
-        <button>Github</button>|
-        <button>Instagram</button>|
-        <button>Spotify</button>
-      </div>
-    </footer>
-    <script src="script.js"></script>
-  </body>
+  </footer>
+  <p>&copy; 2024 Justin Thomasson. All rights reserved.</p>
+  <script src="script.js"></script>
+</body>
 </html>

@@ -1,74 +1,66 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Creating an h2 element and adding some text content
     const h2 = document.createElement('h2');
-    h2.textContent = "This content added by JavaScript";
-    // Including code to add h2 element to the body element in DOM
+    h2.textContent = "Brought to you by NoJest";
     document.querySelector('body').appendChild(h2);
-
+  
     // Event listeners for buttons to open links
     const instagramButton = document.querySelector('.links button:nth-child(2)');
     const spotifyButton = document.querySelector('.links button:nth-child(3)');
     const githubButton = document.querySelector('.links button:nth-child(1)');
-
+  
     instagramButton.addEventListener('click', () => {
-        window.open('https://Instagram.com/Nojest_', '_blank');
+      window.open('https://Instagram.com/Nojest_', '_blank');
     });
-
+  
     spotifyButton.addEventListener('click', () => {
-        window.open('https://open.spotify.com/user/iohf8imf7f923nr073aw5trpq?si=59ebe575ce984d81', '_blank');
+      window.open('https://open.spotify.com/user/iohf8imf7f923nr073aw5trpq?si=59ebe575ce984d81', '_blank');
     });
-
+  
     githubButton.addEventListener('click', () => {
-        window.open('https://github.com/Nojest', '_blank');
+      window.open('https://github.com/Nojest', '_blank');
     });
-
-    // Event listeners for mouseover, mouseout, and mousemove for showing little logos
+  
+    // Event listeners for showing little logos
     const spotifyLogo = document.getElementById('spotifylogo');
     const instagramLogo = document.getElementById('instagramlogo');
     const githubLogo = document.getElementById('githublogo');
-
-    spotifyButton.addEventListener('mouseover', (event) => {
-        spotifyLogo.style.display = 'block';
-        spotifyLogo.style.top = `${event.pageY}px`;
-        spotifyLogo.style.left = `${event.pageX}px`;
+  
+    const showLogo = (logo, event) => {
+      logo.style.display = 'block';
+      logo.style.top = `${event.pageY}px`;
+      logo.style.left = `${event.pageX}px`;
+    };
+  
+    const hideLogo = (logo) => {
+      logo.style.display = 'none';
+    };
+  
+    spotifyButton.addEventListener('mouseover', (event) => showLogo(spotifyLogo, event));
+    spotifyButton.addEventListener('mouseout', () => hideLogo(spotifyLogo));
+    spotifyButton.addEventListener('mousemove', (event) => showLogo(spotifyLogo, event));
+  
+    instagramButton.addEventListener('mouseover', (event) => showLogo(instagramLogo, event));
+    instagramButton.addEventListener('mouseout', () => hideLogo(instagramLogo));
+    instagramButton.addEventListener('mousemove', (event) => showLogo(instagramLogo, event));
+  
+    githubButton.addEventListener('mouseover', (event) => showLogo(githubLogo, event));
+    githubButton.addEventListener('mouseout', () => hideLogo(githubLogo));
+    githubButton.addEventListener('mousemove', (event) => showLogo(githubLogo, event));
+  
+    // Form validation
+    document.querySelector('form').addEventListener('submit', function (event) {
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      if (!name || !email || !message) {
+        alert('Please fill in all fields');
+        event.preventDefault();
+      }
     });
-
-    spotifyButton.addEventListener('mouseout', () => {
-        spotifyLogo.style.display = 'none';
+  
+    // Dark mode toggle
+    document.getElementById('theme-toggle').addEventListener('click', function () {
+      document.body.classList.toggle('dark-mode');
     });
-
-    spotifyButton.addEventListener('mousemove', (event) => {
-        spotifyLogo.style.top = `${event.pageY}px`;
-        spotifyLogo.style.left = `${event.pageX}px`;
-    });
-
-    instagramButton.addEventListener('mouseover', (event) => {
-        instagramLogo.style.display = 'block';
-        instagramLogo.style.top = `${event.pageY}px`;
-        instagramLogo.style.left = `${event.pageX}px`;
-    });
-
-    instagramButton.addEventListener('mouseout', () => {
-        instagramLogo.style.display = 'none';
-    });
-
-    instagramButton.addEventListener('mousemove', (event) => {
-        instagramLogo.style.top = `${event.pageY}px`;
-        instagramLogo.style.left = `${event.pageX}px`;
-    });
-
-    githubButton.addEventListener('mouseover', (event) => {
-        githubLogo.style.display = 'block';
-        githubLogo.style.top = `${event.pageY}px`;
-        githubLogo.style.left = `${event.pageX}px`;
-    });
-
-    githubButton.addEventListener('mouseout', () => {
-        githubLogo.style.display = 'none';
-    });
-
-    githubButton.addEventListener('mousemove', (event) => {
-        githubLogo.style.top = `${event.pageY}px`;
-        githubLogo.style.left = `${event.pageX}px`;
-    });
-});
+  });
