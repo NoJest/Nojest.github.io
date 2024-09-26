@@ -204,4 +204,15 @@ button {
     color: black;
     border: 2px solid #4CAF50;
   }
-  
+  /* Freeciv game styles */
+#freeciv-game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+#freeciv-game iframe {
+    border: 1px solid #000;
+}
