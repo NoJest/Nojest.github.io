@@ -1,8 +1,8 @@
 
 /* Variables for Dark Mode */
 :root {
-    --primary-color: darkmagenta;
-    --hover-color: darkorchid;
+    --primary-color: black;
+    --hover-color: grey;
     --light-bg: whitesmoke;
     --dark-bg: #121212;
     --font-color: white;
@@ -84,7 +84,7 @@ figcaption {
 
 /* Navigation */
 nav {
-    background-color: darkmagenta;
+    background-color: rebeccapurple;
     overflow: hidden;
   }
   
@@ -169,7 +169,7 @@ nav {
 /* button styling */
 
 button {
-    background-color: darkmagenta; 
+    background-color: black; 
     border: none;
     color: white;
     padding: 15px 32px;
@@ -191,7 +191,7 @@ button {
     position: fixed;
     top: 20px;
     right: 20px;
-    background-color: darkmagenta;
+    background-color: black;
     border: none;
     color: white;
     padding: 10px 20px;
